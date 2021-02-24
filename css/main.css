@@ -35,12 +35,38 @@ body {
 }
 
 /* arrange the puzzle pieces on the board */
+.puzzle-image:nth-child(even) {
+	float: right;
+	clear: both;
+}
 
-
+.puzzle-image:nth-child(odd) {
+	float: left;
+	clear: both;
+}
 
 /* set up drop zones */
+.drop-zone {
+	width: 49.5%;
+	height: 49.5%;
+	border: thin dashed white;
+	float: left;
+	position: relative;
+}
 
+/* fix drop zone image styles */
+.drop-zone img {
+	position: absolute;
+	width: 80% !important;
+	bottom: 0;
+	padding: 0;
+	margin: 0;
+}
 
+.tl img { right: 0; }
+.tr img { left: 0; }
+.bl img { top: 0; right: 0; }
+.br img { top: 0; left: 0; }
 
 /* end board styles */
 
@@ -59,10 +85,10 @@ header h1 {
 	margin: 10px 0
 }
 
-header p, footer p { 
-	font-size: 1.7em; 
-	letter-spacing: 2px; 
-	margin: 10px 0 
+header p, footer p {
+	font-size: 1.7em;
+	letter-spacing: 2px;
+	margin: 10px 0
 }
 
 footer {
